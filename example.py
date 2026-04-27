@@ -133,4 +133,144 @@ def calc_bmi(height,weight):
     ret=weight/(height**2)
     return ret
 
+a="Today is a funny day!"
+a.replace("Today","Tomorrow")
+a.replace("is","will be")
+
+a.lower()   
+a.upper() 
+a.count("a")
+
+a="     Tech Acdemy     "
+a=a.strip()
+a
+
+a = """
+ゥ
+
+"""
+a = a.strip()
+a
+
+str1="信号の色は{}と{}と{}"
+str1=str1.format("Red","yellow","blue")
+str1
+
+station1="tennozu"
+station2="shiodome"
+price=140
+str1=f"{station1}から{station2}までの運賃は{price}円です。"
+str1
+price=2000000
+print(f"It's {price:,}yen tax include ")
+
+score=int(input("please input your score:"))
+if score >= 60:
+    print("You are pass!")
+print("End of the process.")
+
+def exam(score):
+    if score >= 60:
+        print("素晴らしい！合格です")
+        print("おめでとうございます!!!")
+    print("処理を終了します")
+exam(-1000)
+
+
+def age(age):
+    if(age >= 18)and(age <= 80):
+        print("Go ahead!")
+    print("End of the process.")
+
+age(32)
+
+def age(age):
+    if (age >= 18) and (age <= 80):
+        print("Go ahead!")
+    print("End of the process.")
+
+age(25)
+
+def your_age(age):
+    if age >= 20:
+        if age <= 60:
+            print("Go ahead")
+print("End the process")
+
+age(5)
+
+def your_score(score):
+    if score >= 50:
+        print("You are pass!")
+        print("congratulation")
+    else:
+        print("You are fail")
+        print("You should work hard")
+    print("End of the process")
+
+your_score(30)
+
+def your_score(score):
+
+    if score >=90:
+        print("You're great!")
+        print("Well done!!!")
+
+    elif score >=60:
+        print("You are pass!")
+        print("congratulation")
     
+    else:
+        print("You are fail")
+        print("You should work hard")
+
+    print("End of the process")
+
+your_score(60)
+
+def your_score(score):
+    if score >=90:
+        print("You're great!")
+        print("Well done!!!")
+    else:
+        if score >=60:
+            print("You are pass!")
+            print("congratulation")
+        else:
+            print("You are fail")
+            print("You should work hard")
+    print("End of the process")
+
+your_score(45)
+
+def kisetsu(season):
+    if season == "spring":
+        print("春はあけぼの")
+    elif season == "summer":
+        print("夏は夜")
+    elif season == "autumn":
+        print("秋は夕暮れ")
+    elif season == "winter":
+        print("冬はつとめて")
+
+    else :
+        print("エラー")
+
+    print("処理を終了します")
+
+kisetsu("autumn")
+
+def kisetsu(season):
+    match season:
+        case "spring":
+            print("春はあけぼの")
+        case "summer":
+            print("夏は夜")
+        case "autumn":
+            print("秋は夕暮れ")
+        case "winter":
+            print("冬はつとめて")
+        case _:
+            print("エラー")
+    print("処理を終了します")
+kisetsu("autumn")
