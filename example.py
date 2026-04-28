@@ -274,3 +274,54 @@ def kisetsu(season):
             print("エラー")
     print("処理を終了します")
 kisetsu("autumn")
+
+i=0
+while i <10:
+    i += 1
+    print(i)
+print("End of the program")
+
+i=0
+while True:
+    i += 1
+
+    if i>10:
+        break
+    print(i)
+print("End of the program")
+
+i=0
+while True:
+    i += 1
+    if i > 10:
+        break
+    if i % 2 == 1:
+        continue
+    print(i)
+print("処理を終了します")
+
+for i in range(11):
+    print(i)
+
+for i in range(1,5):
+    print(i) 
+
+for i in range(1,20,3):
+    print(i)
+
+for i in range(20,0,-3):
+    print(i)
+
+for i in range(11):
+    for j in range(0,11,3):
+        print(f"{i} + {j} = {i + j}")
+
+i=0
+while True:
+    i += 1
+    if i > 20:
+        break
+    if i % 2 == 1:
+        pass
+    print(i)
+print("処理を終了します")
