@@ -325,3 +325,16 @@ while True:
         pass
     print(i)
 print("処理を終了します")
+
+i=7
+if i != 7 and i % 7 == 0:
+    print("７の倍数です")
+else:
+    print("７の倍数ではありません")
+print(i)
+
+i=9
+if i % 2 == 0 or i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
+    pass
+else:
+    print(i)
