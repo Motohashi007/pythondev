@@ -338,3 +338,16 @@ if i % 2 == 0 or i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
     pass
 else:
     print(i)
+
+try:
+    score = int(a)
+except ValueError:
+    print("エラー: 数値を入力してください")
+except:
+    print("エラー: 何らかのエラーが発生しました")
+else:
+    if score >= 60:
+        print("合格です")
+        print("おめでとうございます！")
+finally:
+    print("処理を終了します")
