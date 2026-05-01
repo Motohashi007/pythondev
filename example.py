@@ -351,3 +351,101 @@ else:
         print("おめでとうございます！")
 finally:
     print("処理を終了します")
+
+def kaibun(s):
+    if s == s[::-1]:
+        return True
+    else:
+        return False
+
+s = "asikjedjsjl"
+result = kaibun(s)
+
+if result:
+    print(f"「{s}」は回文です！")
+else:
+    print(f"「{s}」は回文ではないようです。")
+
+
+a = [2, 5, 3, 6, 1, 4]
+b = ["tanaka", "suzuki", "takahashi"]
+c = []
+
+print(c)
+type(c)
+
+e = list("aiueo")
+e
+
+f = list(range(1,4,6,8))
+f
+
+a[0]
+b[:1]
+
+nums = []
+for i in range(5, 11):
+    nums.append(i * 3.14)
+nums
+
+fruits = []
+fruits.append("apple")
+fruits.append("banana")
+fruits.append("orange")
+fruits.insert(1, "peach")
+
+counter = 0
+for s in fruits:
+    print((f"{counter=}, {s=}"))
+    counter += 1     
+
+nums = [10, 20, 30]
+a, b, c = nums
+print(a)
+print(b)
+print(c)
+
+ta = list("Tech Academy")
+char = "e"
+char_count = ta.count(char)
+if char_count:
+    print(f"文字「{char}」はリスト{ta}に{char_count}回含まれます。")
+else:
+    print(f"文字「{char}」はリスト{ta}に含まれません。")
+
+print(ta.index("a"))
+
+num = [4, 7, 1, 6, 3, 2, 5]
+num.reverse()
+num
+
+nums = sorted(num)
+print(num)
+print(nums)
+
+nums2 = sorted(nums, reverse=True)
+print(nums)
+print(nums2)
+
+nums_oneline = [i * 3.14 for i in range(5, 11)]
+nums_oneline
+
+math_numbers = [3.1415926535897, 2.71828182846, 1.618033988749894848204]
+math_numbers_new = []
+for num in math_numbers:
+    math_numbers_new.append(round(num, 3))
+math_numbers = math_numbers_new
+math_numbers
+
+math_numbers = [3.1415926535897, 2.71828182846, 1.618033988749894848204]
+math_numbers = [round(num, 3) for num in math_numbers]
+math_numbers
+
+num4 = [i for i in range(11) if i % 2 == 0 and i % 3 ==0]
+num4
+
+num4 = ["even" if i % 2 ==0 else "odd" for i in range(11)]
+num4
+
+num4 = ["low" if i <3 else "mid" if i < 8 else "hi" for i in range(11)]
+num4
