@@ -449,3 +449,9 @@ num4
 
 num4 = ["low" if i <3 else "mid" if i < 8 else "hi" for i in range(11)]
 num4
+
+list_2d = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+for list_1d in list_2d:
+    print("1次元リスト:", list_1d)
+    for num in list_1d:
+        print(num)
