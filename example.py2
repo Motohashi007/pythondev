@@ -12,3 +12,7 @@ print(3 + "統計学")
 print("テック" - "アカデミー")
 type(1)
 type(3.14159)
+
+N = 3.14159265358979323846264338327950288
+print(math.ceil(N))
+print(math.floor(N))

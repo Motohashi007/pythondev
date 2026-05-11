@@ -495,3 +495,53 @@ for key, value in pref_code.items():
 word_list = []
 word_chr = dict.fromkeys(list("abcdefghijklmnopqrstuvwxyz"),0)
 word_chr
+
+import math
+N = 3.14159265358979323846264338327950288
+print(math.ceil(N))
+print(math.floor(N))
+
+import math as M
+M.floor(3.1555)
+
+import random
+print(random.randrange(11))
+print(random.randrange(1,20,2))
+print(random.randint(1,10))
+nums=list(range(10))
+print(random.choice(nums))
+print(random.choices(nums,k=3))
+print(random.sample(nums,3))
+print(nums)
+random.shuffle(nums)
+print(nums)
+
+from datetime import datetime, timedelta, timezone
+jst = timezone(timedelta(hours=+9),'JST')
+now_dtm = datetime.now(jst)
+print(now_dtm)
+print(now_dtm+timedelta(weeks=1))
+
+from urllib import request
+response = request.urlopen('https://techacademy.jp')
+print(response.read().decode())
+response.close()
+
+x = 4
+print(x)
+def square(x):
+    return x**2
+x = square(x)
+print(x)
+
+import health
+print(type(health))
+print(health)
+height = float(input("身長(m)を入力してください："))
+weight = float(input("体重(kg)を入力してください："))
+
+my_bmi = health.bmi(height, weight)
+my_standard_weight = health.standard_weight(height)
+
+print(f"BMI値：{my_bmi:.1f}")
+print(f"標準体重：{my_standard_weight:.1f}kg")
