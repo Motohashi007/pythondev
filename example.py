@@ -455,3 +455,43 @@ for list_1d in list_2d:
     print("1次元リスト:", list_1d)
     for num in list_1d:
         print(num)
+
+sports = ["baseball", "tennnis", "volleyboll", "tabletennis"]
+temp_sports = enumerate(sports)
+sports_tl = list(temp_sports)
+
+for i, value in enumerate(sports):
+    if i % 2 == 0:
+        print(f"index:{i} => {value}")
+
+names = ['ひろゆき', 'ボブ', 'あかり', 'ベロニカ', 'フェリペ']
+scores = [90, 2, 58, 100, 30]
+
+for index, (name, score)in enumerate (zip(names,scores)):
+    students_number = index + 1
+    if score < 60:
+        print(f"-{name} (学籍番号: {index+1})")
+
+f1 = {"apple", "banana", "orange"}
+f2 = {"peach", "orange", "grape"}
+f3 = f1 | f2
+f3
+f4 = f1 & f2
+f4
+f5 = f1 - f2 
+f5
+
+nums = {i: i*2 for i in range(6)}
+nums
+
+pref_code = {'Hokkaido': 1, 'Aomori': 2, 'Tokyo': 13, 'Osaka': 27}
+for code in pref_code.keys():
+    print(code)
+for value in pref_code.values():
+    print(value)
+for key, value in pref_code.items():
+    print(f"{key} : {value}")
+
+word_list = []
+word_chr = dict.fromkeys(list("abcdefghijklmnopqrstuvwxyz"),0)
+word_chr
