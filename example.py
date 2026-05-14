@@ -545,3 +545,167 @@ my_standard_weight = health.standard_weight(height)
 
 print(f"BMI値：{my_bmi:.1f}")
 print(f"標準体重：{my_standard_weight:.1f}kg")
+
+from datetime import datetime, timedelta, timezone
+jst = timezone(timedelta(hours=+9), 'JST')
+now_dtm = datetime.now(jst)
+print(now_dtm)
+print(now_dtm.weekday())
+
+class Dog:
+    voice = "bow!"
+    def __init__(self, name = "Buddy"):
+        self.name = name
+    def bark (self):
+        print(self.voice)
+
+buddy = Dog()
+print(buddy.name)
+buddy.bark()
+jake = Dog("Jake")
+print(jake.name)
+jake.bark()
+
+class Suit:
+    def __init__(self, color, size, brand):
+        self.color = color
+        self.size = size
+        self.brand = brand
+    def __call__(self,occasion):
+        return f"この{self.color}のスーツ（サイズ：{self.size}、ブランド：{self.brand}）は、{occasion}にぴったりです。"
+
+my_suit = Suit(color="ピンク", size="L", brand="サンプルブランド")
+result = my_suit("パーティー")
+result
+
+class Dog:
+    voice = "bow!"
+    def __init__(self,name = "Buddy"):
+        self.name = name 
+    def __call__(self):
+        return self.bark()
+    def bark(self):
+        print(self.voice)
+buddy = Dog()
+buddy()
+
+class Dog:
+    voice = "bow!"
+    def __init__(self, name = "Buddy"):
+        self.name = name 
+    def bark(self):
+        print(self.voice)
+    @classmethod
+    def description(self):
+        print(f"犬の鳴き声は{self.voice}")
+
+class Japanese_dog:
+    voice = "ワン！"
+    def __init__(self, name ="ポチ"):
+        self.name = name 
+    def bark(self):
+        print(self.voice)
+    @classmethod
+    def description(self):
+        print(f"日本の犬の鳴き声は{self.voice}")
+
+Dog.description()
+buddy = Dog()
+print(buddy.name)
+buddy.bark()
+jake = Dog("Jake")
+print(jake.name)
+jake.bark()
+
+Japanese_dog.description()
+pochi = Japanese_dog()
+print(pochi.name)
+pochi.bark()
+shiro = Japanese_dog("シロ")
+print(shiro.name)
+shiro.bark
+
+class Dog:
+    def __init__(self, name):
+        self.name = name
+    def bark(self):
+        print(self.voice)
+class English_dog(Dog):
+    voice = "Bow!"
+    def __init__(self, name = "Buddy"):
+        super().__init__(name)
+    @classmethod
+    def description(self):
+        print(f"英語圏の犬の鳴き声は{self.voice}")
+class Japanese_dog(Dog):
+    voice = "ワン！"
+    def __init__(self,name= "ポチ"):
+        super().__init__(name)
+    @classmethod
+    def description(self):
+        print(f"日本の犬の鳴き声は{self.voice}")
+
+English_Dog.description()
+
+buddy = English_Dog()
+print(buddy.name)
+buddy.bark()
+
+jake = English_Dog("Jake")
+print(jake.name)
+jake.bark()
+
+Japanese_Dog.description()
+
+pochi = Japanese_dog()
+print(pochi.name)
+pochi.bark()
+
+shiro = Japanese_dog("シロ")
+print(shiro.name)
+shiro.bark()
+
+class Dog:
+    voice = "defferent to each country"
+    def __init__(self, name):
+        self.name = name 
+    def bark(self):
+        print(self.voice)
+    @classmethod
+    def description(self):
+        print((f"世界の犬の鳴き声は{self.voice}")
+class English_dog(Dog):
+    voice = "bow!"
+    def __init__(self, name = "Buddy"):
+        super().__init__(name)
+    @classmethod
+    def description(self):
+        print(f"英語圏の犬の鳴き声は{self.voice}")
+class Japanese_dog(Dog):
+    voice = "wan!"
+    def __init__(self, name = "Pochi"):
+        super().__init__(name)
+    @classmethod
+    def description(self):
+        print(f"日本の犬の鳴き声は{self.voice}")
+
+Dog.description()
+dog = Dog("犬")
+print(dog.name)
+dog.bark
+buddy = English_dog()
+print(buddy.name)
+buddy.bark()
+shiro = Japanese_dog("シロ")
+print(shiro.name)
+shiro.bark()
+
+class Human2:
+    def __init__(self, name):
+        self.set_name(name)
+    def get_name(self):
+        return self.__name
+    def set_name(self,name):
+        self.__name = name
+tanaka = Human2("田中")
+print(tanaka.get_name())
