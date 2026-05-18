@@ -709,3 +709,154 @@ class Human2:
         self.__name = name
 tanaka = Human2("田中")
 print(tanaka.get_name())
+
+with open("./sample_data/README.md", "r", encoding="utf-8") as f:
+    text = f.read()
+print(text)
+
+with open("kakikomi.txt", "w", encoding="utf-8") as f:
+    f.write("これはサンプル文です。\n")
+
+import csv
+with open("./sample_data/california_housing_test.csv", encoding="utf-8) as f:
+    reader = csv.reader(f)
+    content = list(reader)
+content[:5]
+
+import csv
+menu_data = [
+    ["商品名", "説明", "値段"],
+    ["特製ハンバーガー", "特製パティを使ったジューシーなハンバーガー", 1200],
+    ["シーフードパスタ", "甘みとコクが特長のシーフードパスタ", 1800],
+    ["野菜たっぷりサラダ", "新鮮な季節野菜がたっぷりのヘルシーサラダ", 900],
+    ["シェフ特製デザート", "シェフ自慢のデザートの盛り合わせ", 1500],
+    ["贅沢フルコースコース", "前菜、スープ、メイン、デザートが楽しめるフルコース", 4500],
+    ["季節限定ドリンク", "旬のフルーツを使用した季節限定の特製ドリンク", 800]
+]
+with open("menu.csv", "w", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerows(menu_data)
+
+archery_data = [
+    ["商品名", "説明", "価格"],
+    ["トップレベルリカーブボウ", "プロフェッショナル向けのトップレベルリカーブボウ", 35000],
+    ["エントリーレベルリカーブボウ", "初心者向けのエントリーレベルリカーブボウ", 12000],
+    ["コンパウンドボウ", "調整が容易で高い命中精度を持つコンパウンドボウ", 28000],
+    ["矢（アロー）10本セット", "信頼性のある矢（アロー）のセット（10本）", 5000],
+    ["アーチェリーグローブ", "手の保護に適したアーチェリーグローブ", 2500],
+    ["アーチェリーターゲット", "耐久性が高く矢を止めやすいアーチェリーターゲット", 8000]
+]
+
+with open("archery.csv", "w", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    for row in archery_data:
+        writer.writerow(row)
+
+import json
+with open("./config.json", encoding="utf-8") as f:
+    data = json.load(f)
+data
+type(data)
+
+person_str = """{
+    "name": "田中",
+    "age": 25,
+    "prefecture": "東京都",
+    "hobby": [
+        {
+            "id": 1,
+            "name": "映画鑑賞"
+        },
+        {
+            "id": 2,
+            "name": "ジョギング"
+        }
+    ]
+}"""
+person_data = json.loads(person_str)
+type(person_data)
+person_data["hobby"][0]["name"]
+
+with open("person_data.jason", "w", encording="utf-8")as f:
+    json.dump(person_data, f, ensure_ascii=False)
+
+class Suit:
+    def __init__(self, color, size, brand):
+        self.color = color
+        self.size = size
+        self.brand = brand
+
+    def __call__(self, occasion="ビジネス"):
+        return f"この{self.color}のスーツ（サイズ：{self.size}、ブランド：{self.brand}）は、{occasion}にぴったりです。"
+
+my_suit = Suit(color="ピンク", size="L", brand="サンプルブランド")
+import pickle
+
+with open('suit.pkl', 'wb') as f:
+    pickle.dump(my_suit, f)
+with open('suit.pkl', 'rb') as f:
+    my_suit_reloaded = pickle.load(f)
+    my_suit_reloaded("パーティー")
+
+with open("./dummy_txt/dummy.txt", encoding="utf-8") as f:
+    text = f.read()
+print(text)
+
+import re
+re.findall(r"山.県",text)
+re.findall(r"和..県", text)
+re.findall(r"本.", text)
+re.findall(r"^福.", text, re.MULTILINE)
+re.findall(r"5976$", text, re.MULTILINE)
+re.findall(r"^北.? .{2}", text, re.MULTILINE)
+re.findall(r"[s-z]\D.{3}", text, re.MULTILINE)
+text_replaced = re.sub(r"福(?=岡)", r"静", text)
+print(text_replaced)
+
+import numpy as np 
+a = np.array([0, 1, 2])
+print(type(a))
+print(a)
+print(a.dtype)
+
+b = np.array([1, 1.5, 2])
+print(b)
+print(b.dtype)
+c = np.array([True, False, True, False, False])
+print(c)
+print(c.dtype)
+
+g = np.random.rand(5)
+print(g)
+
+a = np.arange(1, 21)
+print(a)
+print(a.shape)
+b = a.reshape(4, 5)
+print(b)
+print(b.shape)
+
+c = np.arange(1, 21).reshape(4,5)
+d = c.flatten()
+print(c)
+print(d)
+
+a = np.arange(1,11)
+print(a)
+print(a + 1)
+
+a = np.arange(1,7).reshape(2,3)
+b = np.arange(7,13).reshape(2,3)
+print(b + a)
+
+import pandas as pd
+df = pd.read_csv("./sample_data/california_housing_train.csv")
+df
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+df = pd.read_csv("./sample_data/california_housing_train.csv")
+df
+y = df.median_income
+y
