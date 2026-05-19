@@ -860,3 +860,9 @@ df = pd.read_csv("./sample_data/california_housing_train.csv")
 df
 y = df.median_income
 y
+
+from PIL import Image
+import matplotlib.pyplot as plt
+tokyo_tower = Image.open("Tokyo_tower.png")
+tokyo_tower
+type(tokyo_tower)
